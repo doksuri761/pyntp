@@ -46,10 +46,10 @@ class Ui_Dialog(object):
                 res = ntpcli.request(host)
                 text = ""
                 text += "------------------------------------\n"
-                text += f"offset: {res.offset}\n"
-                text += f"tx time: {ctime(res.tx_time)}\n"
-                text += f"local time: {datetime.now().ctime()}\n"
-                text += f"time elapsed: {time() - start_time}\n"
+                text += f"Offset: {res.offset}\n"
+                text += f"Tx time: {ctime(res.tx_time)}\n"
+                text += f"Local time: {datetime.now().ctime()}\n"
+                text += f"Time elapsed: {time() - start_time}\n"
                 text += "------------------------------------"
                 self.print.setText(text)
                 sleep(abs(interval - (time() - start_time)))
